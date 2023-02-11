@@ -7,7 +7,8 @@ El Zen de Python se centra en la legibilidad, la simplicidad y la claridad del c
 
 ---
 
-1.  **Bonito es mejor que feo**: La estética y la presentación de código son importantes para la legibilidad. Un código bien formateado y estructurado es más fácil de leer y mantener que uno feo y desordenado.
+1.  **Bonito es mejor que feo**: 
+La estética y la presentación de código son importantes para la legibilidad. Un código bien formateado y estructurado es más fácil de leer y mantener que uno feo y desordenado.
 
 *Ejemplo*:
 
@@ -21,7 +22,8 @@ def sumar(a, b):
     return a + b
 ``` 
 ---
-2.  **Explícito es mejor que implícito**: El código debería ser claro y explícito en su intención y funcionamiento. Las abreviaturas y acrónimos pueden ser confusos para otros programadores y deben evitarse en la medida de lo posible.
+2.  **Explícito es mejor que implícito**: 
+El código debería ser claro y explícito en su intención y funcionamiento. Las abreviaturas y acrónimos pueden ser confusos para otros programadores y deben evitarse en la medida de lo posible.
 
 *Ejemplo*:
 
@@ -35,7 +37,8 @@ def calcular_cuadrado(x):
     return x ** 2
 ``` 
 ---
-3.  **Simple es mejor que complejo**: Un código simple es más fácil de entender y mantener que uno complejo. Es importante buscar la simplicidad en la solución a un problema.
+3.  **Simple es mejor que complejo**: 
+Un código simple es más fácil de entender y mantener que uno complejo. Es importante buscar la simplicidad en la solución a un problema.
 
 *Ejemplo*:
 
@@ -54,7 +57,8 @@ def sumar_números_pares(numbers):
 ```
 
 ---
-4.  **Complejo es mejor que complicado**: Un código complejo puede ser necesario para resolver un problema complejo, pero debe ser claro y fácil de entender. Un código complicado es difícil de entender y mantener.
+4.  **Complejo es mejor que complicado**: 
+Un código complejo puede ser necesario para resolver un problema complejo, pero debe ser claro y fácil de entender. Un código complicado es difícil de entender y mantener.
 
 *Ejemplo*:
 
@@ -78,7 +82,8 @@ for i in range(2, int(n ** 0.5) + 1):
 return True
 ```
 ---
-5.  **Plano es mejor que anidado**: Un código con una profundidad de anidamiento limitada es más fácil de entender y mantener que uno con una profundidad de anidamiento excesiva.
+5.  **Plano es mejor que anidado**: 
+Un código con una profundidad de anidamiento limitada es más fácil de entender y mantener que uno con una profundidad de anidamiento excesiva.
 
 *Ejemplo*:
 
@@ -99,7 +104,8 @@ def calcular_precio(productos):
  ```
 
 ---
-6. **Disperso es mejor que denso**: Un código con una alta densidad de información es difícil de entender y mantener. Es mejor tener un código disperso con líneas separadas para cada concepto.
+6. **Disperso es mejor que denso**: 
+Un código con una alta densidad de información es difícil de entender y mantener. Es mejor tener un código disperso con líneas separadas para cada concepto.
 
 *Ejemplo*:
 
@@ -116,7 +122,8 @@ def calcular_impuestos(ingresos, gastos):
 
 ---
 
-7. **La legibilidad importa**: Esto significa que es importante escribir código que sea fácil de leer y comprender para otros programadores, así como para ti mismo en el futuro.
+7. **La legibilidad importa**: 
+Esto significa que es importante escribir código que sea fácil de leer y comprender para otros programadores, así como para ti mismo en el futuro.
 
 Un código legible es más fácil de mantener y solucionar problemas, lo que reduce el tiempo y los costos de desarrollo. 
 
@@ -140,7 +147,8 @@ En el segundo ejemplo, la función "calcular_suma" es clara y descripciva, lo qu
 
 ---
 
-8. **Los casos especiales no son lo suficientemente especiales para romper reglas**: Aunque pueda haber casos especiales que requieran un tratamiento especial, no deben ser una excepción a las buenas prácticas de codificación.
+8. **Los casos especiales no son lo suficientemente especiales para romper reglas**: 
+Aunque pueda haber casos especiales que requieran un tratamiento especial, no deben ser una excepción a las buenas prácticas de codificación.
 
 *Ejemplo*:
 
@@ -154,7 +162,8 @@ def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): tasa =
 ---
 
 
-9. **Practicidad vence a la pureza**: La funcionalidad y la utilidad del código son más importantes que la pureza matemática o teórica. Es mejor una solución práctica y funcional aunque no sea pura.
+9. **Practicidad vence a la pureza**: 
+La funcionalidad y la utilidad del código son más importantes que la pureza matemática o teórica. Es mejor una solución práctica y funcional aunque no sea pura.
 
 *Ejemplo*:
 
@@ -175,7 +184,8 @@ def factorial(n):
 ```
 ---
 
- 10. **Los errores nunca deberían de ocurrir silenciosamente**: Es importante que los errores sean manejados y notificados de manera adecuada para evitar problemas en la ejecución del código.
+ 10. **Los errores nunca deberían de ocurrir silenciosamente**: 
+ Es importante que los errores sean manejados y notificados de manera adecuada para evitar problemas en la ejecución del código.
 
 *Ejemplo*: 
 
@@ -188,7 +198,8 @@ def dividir(a, b): try: return a / b except ZeroDivisionError: print("Error: no 
 ```
 ---
 
- 11. **A no ser que se silencien explícitamente**: En algunos casos específicos, puede ser necesario silenciar errores o excepciones, pero esto debe hacerse de manera explícita y justificada.
+ 11. **A no ser que se silencien explícitamente**: 
+ En algunos casos específicos, puede ser necesario silenciar errores o excepciones, pero esto debe hacerse de manera explícita y justificada.
 
 *Ejemplo*:
 
@@ -202,7 +213,8 @@ def calcular_raíz_cuadrada(x): try: return x ** 0.5 except ValueError: pass
 
 -----
 
- 12. **En el caso de ambigüedad, rechaza la tentación de adivinar**: Es importante ser explícito y claro en el código y evitar la ambigüedad y la adivinanza.
+ 12. **En el caso de ambigüedad, rechaza la tentación de adivinar**: 
+ Es importante ser explícito y claro en el código y evitar la ambigüedad y la adivinanza.
 
 *Ejemplo*:
 
@@ -219,7 +231,8 @@ def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10):
     return (ingresos - gastos) * tasa
 ```
 -----
- 13. **Debería de haber una – y preferiblemente sólo una – forma obvia de hacerlo**: Debe buscarse la simplicidad y claridad en el código y evitar soluciones confusas o con múltiples formas de hacer lo mismo.
+ 13. **Debería de haber una – y preferiblemente sólo una – forma obvia de hacerlo**: 
+ Debe buscarse la simplicidad y claridad en el código y evitar soluciones confusas o con múltiples formas de hacer lo mismo.
 
 *Ejemplo*: 
 
@@ -232,7 +245,8 @@ def calcular_impuestos(ingresos, gastos): if ingresos > 1000: tasa = 0.15 else: 
 def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): tasa = tasa_alta if ingresos > 1000 else tasa_baja return (ingresos - gastos) * tasa
 ```
 -----
- 14. **Aunque la forma no parezca obvia a la primera, a no ser que seas Holandés**: La frase "Aunque la forma no parezca obvia a la primera" se refiere a que a veces es necesario pensar fuera de la caja para encontrar la solución más simple y eficiente. La frase "a no ser que seas Holandés" es una broma y no debe ser tomada en serio.
+ 14. **Aunque la forma no parezca obvia a la primera, a no ser que seas Holandés**:
+La frase "Aunque la forma no parezca obvia a la primera" se refiere a que a veces es necesario pensar fuera de la caja para encontrar la solución más simple y eficiente. La frase "a no ser que seas Holandés" es una broma y no debe ser tomada en serio.
 
 *Ejemplo*: 
 
@@ -254,7 +268,8 @@ def encontrar_elemento(lista, elemento):
 
 -----
 
-15. **Ahora es mejor que nunca**: Es importante comenzar a implementar buenas prácticas de codificación desde el principio, aunque no se hayan implementado antes.
+15. **Ahora es mejor que nunca**: 
+Es importante comenzar a implementar buenas prácticas de codificación desde el principio, aunque no se hayan implementado antes.
 
 *Ejemplo*: 
 
@@ -277,7 +292,8 @@ En el segundo ejemplo, se utiliza la función sum y una expresión matemática p
 
 -----
 
-16.  **Aunque nunca es a menudo mejor que ahora mismo**: Es importante no posponer la implementación de buenas prácticas de codificación, pero también es importante tener en cuenta el contexto y asegurarse de que la implementación se haga en el momento adecuado.
+16.  **Aunque nunca es a menudo mejor que ahora mismo**: 
+Es importante no posponer la implementación de buenas prácticas de codificación, pero también es importante tener en cuenta el contexto y asegurarse de que la implementación se haga en el momento adecuado.
 
 *Ejemplo*: 
 
@@ -294,7 +310,8 @@ def calcular_impuestos(ingresos, gastos, tasa=0.15):
 
 -----
 
-17.  **Si la implementación es difícil de explicar, es una mala idea**: Si una solución es difícil de explicar, probablemente sea complicada y difícil de entender y mantener. Es importante buscar soluciones claras y fáciles de explicar.
+17.  **Si la implementación es difícil de explicar, es una mala idea**: 
+Si una solución es difícil de explicar, probablemente sea complicada y difícil de entender y mantener. Es importante buscar soluciones claras y fáciles de explicar.
 
 *Ejemplo*: 
 
@@ -320,7 +337,8 @@ def calcular_impuestos(ingresos, gastos, tasa=0.15, rebaja=0.05):
 ```
 -----
 
-18.  **Si la implementación es fácil de explicar, es una buena idea**: Si una solución es fácil de explicar, probablemente sea clara y fácil de entender y mantener.
+18.  **Si la implementación es fácil de explicar, es una buena idea**: 
+Si una solución es fácil de explicar, probablemente sea clara y fácil de entender y mantener.
 
 Esto significa que la claridad y la simplicidad son factores importantes en la escritura de código. Si una solución es fácil de explicar, es probable que sea clara y fácil de entender y mantener.
 
@@ -351,7 +369,8 @@ En el segundo ejemplo, se utiliza una tasa alta y una tasa baja como argumentos 
 
 ---
 
-19.  **Los espacios de nombres son una buena idea, ¡usemos más de ellos!**: Los espacios de nombres son una buena manera de organizar y separar el código en diferentes módulos y componentes, lo que facilita la legibilidad y la mantenibilidad del código.
+19.  **Los espacios de nombres son una buena idea, ¡usemos más de ellos!**: 
+Los espacios de nombres son una buena manera de organizar y separar el código en diferentes módulos y componentes, lo que facilita la legibilidad y la mantenibilidad del código.
 
 *Ejemplo*:
 
