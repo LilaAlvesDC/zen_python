@@ -154,7 +154,11 @@ Aunque pueda haber casos especiales que requieran un tratamiento especial, no de
 
 ```python
 # Mal
-def calcular_impuestos(ingresos, gastos): if ingresos > 1000: return (ingresos - gastos) * 0.15 else: return (ingresos - gastos) * 0.10
+def calcular_impuestos(ingresos, gastos): 
+    if ingresos > 1000: 
+        return (ingresos - gastos) * 0.15 
+    else: 
+        return (ingresos - gastos) * 0.10
 
 # Bien
 def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): tasa = tasa_alta if ingresos > 1000 else tasa_baja return (ingresos - gastos) * tasa
@@ -239,10 +243,17 @@ def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10):
 ```python
 # Mal
 
-def calcular_impuestos(ingresos, gastos): if ingresos > 1000: tasa = 0.15 else: tasa = 0.10 return (ingresos - gastos) * tasa
+def calcular_impuestos(ingresos, gastos): 
+    if ingresos > 1000: 
+        tasa = 0.15 
+    else: tasa = 0.10 
+    return (ingresos - gastos) * tasa
 
 # Bien
-def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): tasa = tasa_alta if ingresos > 1000 else tasa_baja return (ingresos - gastos) * tasa
+def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): 
+    tasa = tasa_alta 
+    if ingresos > 1000 else tasa_baja 
+        return (ingresos - gastos) * tasa
 ```
 -----
  14. **Aunque la forma no parezca obvia a la primera, a no ser que seas Holandés**:
