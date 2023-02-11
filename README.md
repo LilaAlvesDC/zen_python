@@ -1,9 +1,18 @@
 ## Zen de Python
 ---
 
-El Zen de Python es un conjunto de filosofías y buenas prácticas para escribir código en Python. Estas filosofías fueron escritas por Tim Peters, uno de los primeros desarrolladores de Python, y se han convertido en una guía importante para la comunidad de Python.
+El [Zen de Python](https://github.com/python/peps/blob/main/pep-0020.txt) es un conjunto de filosofías y buenas prácticas para escribir código en Python. Estas filosofías fueron escritas por Tim Peters, uno de los primeros desarrolladores de Python, y se han convertido en una guía importante para la comunidad de Python.
 
 El Zen de Python se centra en la legibilidad, la simplicidad y la claridad del código, y se basa en la idea de que el código debe ser fácil de leer y comprender para otros programadores, así como para ti mismo en el futuro.
+
+Puedes ver el Zen de Python en tu código utilizando el siguiente código en Python:
+
+
+```python 
+import this
+```
+
+Ejecutando este código en un intérprete de Python o en un script, se mostrará el Zen de Python en forma de texto ASCII art. Es un buen recordatorio de las buenas prácticas y filosofía de codificación en Python.
 
 ---
 
