@@ -161,7 +161,9 @@ def calcular_impuestos(ingresos, gastos):
         return (ingresos - gastos) * 0.10
 
 # Bien
-def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): tasa = tasa_alta if ingresos > 1000 else tasa_baja return (ingresos - gastos) * tasa
+def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): 
+    tasa = tasa_alta if ingresos > 1000 else tasa_baja 
+    return (ingresos - gastos) * tasa
 ```
 ---
 
