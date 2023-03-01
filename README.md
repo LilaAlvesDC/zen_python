@@ -11,7 +11,7 @@ Puedes ver el Zen de Python ejecutando el siguiente código en Python:
 import this
 ```
 
-[![Youtube.jpg](https://i.postimg.cc/h4TW0jzg/Youtube.jpg)]([https://postimg.cc/dDsxsJjS](https://youtu.be/AuRT9DmJocA))
+[![Youtube.jpg](https://i.postimg.cc/h4TW0jzg/Youtube.jpg)](https://youtu.be/AuRT9DmJocA))
 
 ---
 
