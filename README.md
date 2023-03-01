@@ -1,38 +1,36 @@
-## Zen de Python
+## El camino del ‘Zen’ en Python: cómo mejorar tus habilidades como programador
 ---
 
 El [Zen de Python](https://github.com/python/peps/blob/main/pep-0020.txt) es un conjunto de filosofías y buenas prácticas para escribir código en Python. Estas filosofías fueron escritas por Tim Peters, uno de los primeros desarrolladores de Python, y se han convertido en una guía importante para la comunidad de Python.
 
 El Zen de Python se centra en la legibilidad, la simplicidad y la claridad del código, y se basa en la idea de que el código debe ser fácil de leer y comprender para otros programadores, así como para ti mismo en el futuro.
 
-Puedes ver el Zen de Python en tu código utilizando el siguiente código en Python:
-
+Puedes ver el Zen de Python ejecutando el siguiente código en Python:
 
 ```python 
 import this
 ```
 
-Ejecutando este código en un intérprete de Python o en un script, se mostrará el Zen de Python en forma de texto ASCII art. Es un buen recordatorio de las buenas prácticas y filosofía de codificación en Python.
+[![Youtube.jpg](https://i.postimg.cc/h4TW0jzg/Youtube.jpg)]([https://postimg.cc/dDsxsJjS](https://youtu.be/AuRT9DmJocA))
 
 ---
 
-1.  **Bonito es mejor que feo**: 
-La estética y la presentación de código son importantes para la legibilidad. Un código bien formateado y estructurado es más fácil de leer y mantener que uno feo y desordenado.
+1.  **Bonito es mejor que feo**: La estética y la presentación de código son importantes para la legibilidad. Un código bien formateado y estructurado es más fácil de leer y mantener que uno feo y desordenado.
 
 *Ejemplo*:
 
 ```python
 # Mal
-def suma(a,b):
-    return a+b
+for i in range(len([1,2,3,4,5])):
+    print(i*2)
 
 # Bien
-def sumar(a, b):
-    return a + b
+numeros = [1, 2, 3, 4, 5]
+for numero in numeros:
+    print(numero * 2)
 ``` 
 ---
-2.  **Explícito es mejor que implícito**: 
-El código debería ser claro y explícito en su intención y funcionamiento. Las abreviaturas y acrónimos pueden ser confusos para otros programadores y deben evitarse en la medida de lo posible.
+2.  **Explícito es mejor que implícito**: El código debería ser claro y explícito en su intención como en su funcionamiento. Las abreviaturas y acrónimos pueden ser confusos para otros programadores por tanto deben evitarse en la medida de lo posible.
 
 *Ejemplo*:
 
@@ -46,8 +44,7 @@ def calcular_cuadrado(x):
     return x ** 2
 ``` 
 ---
-3.  **Simple es mejor que complejo**: 
-Un código simple es más fácil de entender y mantener que uno complejo. Es importante buscar la simplicidad en la solución a un problema.
+3.  **Simple es mejor que complejo**: Un código simple es más fácil de entender y mantener que uno complejo. Es importante buscar la simplicidad en la solución a un problema.
 
 *Ejemplo*:
 
@@ -66,10 +63,10 @@ def sumar_números_pares(numbers):
 ```
 
 ---
-4.  **Complejo es mejor que complicado**: 
-Un código complejo puede ser necesario para resolver un problema complejo, pero debe ser claro y fácil de entender. Un código complicado es difícil de entender y mantener.
 
-*Ejemplo*:
+4.  **Complejo es mejor que complicado**: Un código complejo puede ser necesario para resolver un problema complejo, pero debe ser claro y fácil de entender. Un código complicado es difícil de entender y mantener.
+
+Ejemplo:
 
 ```python
 # Mal
@@ -83,60 +80,72 @@ def es_primo(n):
 
 # Bien
 def es_primo(n):
-if n <= 1:
-    return False
-for i in range(2, int(n ** 0.5) + 1):
-    if n % i == 0:
+    if n <= 1:
         return False
-return True
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
 ```
+
+La función "es_primo" comprueba si un número dado es primo o no. En la primera implementación de la función, se utiliza un bucle "for" para iterar a través de todos los números entre 2 y "n-1" para verificar si "n" es divisible por cualquiera de estos números. Esto es una solución complicada, porque es necesario iterar a través de todos estos números, lo que puede ser ineficiente y aumentar el tiempo de ejecución de la función.
+
+La segunda implementación de la función utiliza una solución más compleja pero más eficiente. En lugar de iterar a través de todos los números, solo se necesita iterar hasta la raíz cuadrada de "n", lo que disminuye el número de iteraciones necesarias. En otras palabras, si "n" es divisible por un número mayor que la raíz cuadrada de "n", entonces también sería divisible por un número menor que la raíz cuadrada de "n", y este número ya habría sido comprobado en una iteración anterior.
+
+Por lo tanto, la segunda implementación de la función es más compleja pero más eficiente, ya que utiliza un enfoque matemático avanzado para reducir la cantidad de iteraciones necesarias para verificar si un número es primo. La solución es más fácil de entender y mantener en el futuro, lo que la hace más escalable y eficiente.
+
 ---
-5.  **Plano es mejor que anidado**: 
-Un código con una profundidad de anidamiento limitada es más fácil de entender y mantener que uno con una profundidad de anidamiento excesiva.
+[-]
+5.  **Plano es mejor que anidado**: Un código con una profundidad de anidamiento limitada es más fácil de entender y mantener que uno con una profundidad de anidamiento excesiva.
 
 *Ejemplo*:
 
 ```python
-# Mal
-def calcular_precio(productos):
-    total = 0
-    for producto in productos:
-        if producto.tipo == 'frutas':
-            if producto.nombre in ['manzana', 'banana'` 
+# Mal 
+def b():
+    numeros = range(10)
+    for i in numeros:
+        for j in numeros:
+            for k in numeros:
+                for l in numeros:
+                    for m in numeros:
+                        for n in numeros:
+                            for o in numeros:
+                                for p in numeros:
+                                    for q in numeros:
+                                        print(i, j, k, l, m, n, o, p, q)
 
 # Bien
-def calcular_precio(productos): 
-    total = 0 frutas = ['manzana', 'banana'] 
-    for producto in productos: 
-        if producto.tipo == 'frutas' and producto.nombre in frutas: 				total += producto.precio 
-    elif producto.tipo == 'verduras': total += producto.precio * 1.5 return total
- ```
+from itertools import product
+
+def b():
+    for tupla in product(range(10), repeat=9):
+        print(tupla)
+```
 
 ---
-6. **Disperso es mejor que denso**: 
-Un código con una alta densidad de información es difícil de entender y mantener. Es mejor tener un código disperso con líneas separadas para cada concepto.
+[-]
+6. **Disperso es mejor que denso**: Un código con una alta densidad de información es difícil de entender y mantener. Es mejor tener un código disperso con líneas separadas para cada concepto.
 
-*Ejemplo*:
+Ejemplo:
 
 ```python
 # Mal
-def calcular_impuestos(ingresos, gastos): 
-    return (ingresos - gastos) * 0.15
+print('\n'.join("%i bytes = %i bits which has %i possible values." % (j, j*8, 256**j-1) for j in (1 << i for i in range(8))))
 
 # Bien
-def calcular_impuestos(ingresos, gastos): 
-    base_imponible = ingresos - gastos impuesto base_imponible * 0.15       
-    return impuesto
+for i in range(8):
+    j = 1 << i
+    bytes = j
+    bits = j * 8
+    possible_values = 256 ** j - 1
+    result = f"{bytes} bytes = {bits} bits which has {possible_values} possible values."
+    print(result)
 ```
 
 ---
 
-7. **La legibilidad importa**: 
-Esto significa que es importante escribir código que sea fácil de leer y comprender para otros programadores, así como para ti mismo en el futuro.
-
-Un código legible es más fácil de mantener y solucionar problemas, lo que reduce el tiempo y los costos de desarrollo. 
-
-Por lo tanto, es importante prestar atención a la legibilidad del código y seguir buenas prácticas, como utilizar nombres de variables y funciones claros y descripcivos, utilizar espacios y sangrías adecuadas y seguir un estilo de codificación consistente.
+7. **La legibilidad importa**: Esto significa que es importante escribir código que sea fácil de leer y comprender para otros programadores, así como para ti mismo en el futuro. Un código legible es más fácil de mantener y solucionar problemas, lo que reduce el tiempo y los costos de desarrollo. 
 
 *Ejemplo*: 
 
@@ -150,35 +159,44 @@ def calcular_suma(operando_1, operando_2):
     return operando_1 + operando_2
 ```
 
-En el primer ejemplo, la función "c" no es claramente descripciva y es difícil de entender qué hace.
+En el primer ejemplo, la función "c" no es claramente descriptiva y es difícil de entender qué hace.
 
-En el segundo ejemplo, la función "calcular_suma" es clara y descripciva, lo que facilita la comprensión de lo que hace. Además, los nombres de variables "operando_1" y "operando_2" son claros y descripcivos.
+En el segundo ejemplo, la función "calcular_suma" es clara y descriptiva, lo que facilita la comprensión de lo que hace. Además, los nombres de variables "operando_1" y "operando_2" son claros y descriptivos.
 
 ---
 
-8. **Los casos especiales no son lo suficientemente especiales para romper reglas**: 
-Aunque pueda haber casos especiales que requieran un tratamiento especial, no deben ser una excepción a las buenas prácticas de codificación.
+8. **Los casos especiales no son lo suficientemente especiales para romper reglas.**: 
+
+Aunque pueda haber casos especiales que requieran un tratamiento especial, no deben ser una excepción a las buenas prácticas de codificación. 
+
+
 
 *Ejemplo*:
 
 ```python
 # Mal
-def calcular_impuestos(ingresos, gastos): 
-    if ingresos > 1000: 
-        return (ingresos - gastos) * 0.15 
-    else: 
-        return (ingresos - gastos) * 0.10
+def divisible_por_tres(numero):
+    if numero == 9:
+        return "Nueve es especial"
+    elif numero % 3 == 0:
+        return "Divisible por tres"
+    else:
+        return "No divisible por tres"
 
 # Bien
-def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): 
-    tasa = tasa_alta if ingresos > 1000 else tasa_baja 
-    return (ingresos - gastos) * tasa
+def divisible_por_tres(numero):
+    if numero % 3 == 0:
+        return "Divisible por tres"
+    else:
+        return "No divisible por tres"
 ```
+En el primer ejemplo, la función crea una excepción especial para el número 9 que no sigue la regla general de divisibilidad por 3. En lugar de simplemente verificar si el número es divisible por 3, la función crea una excepción para el caso específico del número 9, lo que dificulta el mantenimiento y la escalabilidad del código.
+
+En el segundo ejemplo, la función sigue la regla general de divisibilidad por 3 y no crea excepciones especiales para casos específicos. De esta manera, el código es más práctico, fácil de entender y fácil de mantener, lo que lo hace más escalable y eficiente.
+
 ---
 
-
-9. **Practicidad vence a la pureza**: 
-La funcionalidad y la utilidad del código son más importantes que la pureza matemática o teórica. Es mejor una solución práctica y funcional aunque no sea pura.
+9. **Practicidad vence a la pureza:** La funcionalidad y la utilidad del código son más importantes que la pureza matemática o teórica. Es mejor una solución práctica y funcional aunque no sea pura.: 
 
 *Ejemplo*:
 
@@ -197,10 +215,14 @@ def factorial(n):
         result *= i
     return result
 ```
+
+La primera implementación utiliza un enfoque recursivo, mientras que la segunda utiliza un enfoque iterativo. 
+
+La segunda solución es más eficiente y fácil de entender porque utiliza un enfoque iterativo simple y eficiente para calcular el factorial de un número, lo que la hace más rápida en términos de tiempo de ejecución y menos propensa a causar desbordamiento de pila.
+
 ---
 
- 10. **Los errores nunca deberían de ocurrir silenciosamente**: 
- Es importante que los errores sean manejados y notificados de manera adecuada para evitar problemas en la ejecución del código.
+ 10. **Los errores nunca deberían de ocurrir silenciosamente. A no ser que se silencien explícitamente**: Es importante que los errores sean manejados y notificados de manera adecuada para evitar problemas en la ejecución del código.
 
 *Ejemplo*: 
 
@@ -209,190 +231,79 @@ def factorial(n):
 def dividir(a, b): return a / b
 
 # Bien
-def dividir(a, b): try: return a / b except ZeroDivisionError: print("Error: no se puede dividir por cero")
-```
----
-
- 11. **A no ser que se silencien explícitamente**: 
- En algunos casos específicos, puede ser necesario silenciar errores o excepciones, pero esto debe hacerse de manera explícita y justificada.
-
-*Ejemplo*:
-
-```python
-# Mal
-def calcular_raíz_cuadrada(x): return x ** 0.5
-
-# Bien
-def calcular_raíz_cuadrada(x): try: return x ** 0.5 except ValueError: pass
+def dividir(a, b): 
+    try: 
+        return a / b 
+    except ZeroDivisionError: 
+        print("Error: no se puede dividir por cero")
 ```
 
 -----
 
- 12. **En el caso de ambigüedad, rechaza la tentación de adivinar**: 
- Es importante ser explícito y claro en el código y evitar la ambigüedad y la adivinanza.
+ 11.   **En el caso de ambigüedad, rechaza la tentación de adivinar**: A menudo, cuando nos encontramos con una parte del código que no está clara o ambigua, podemos sentir la tentación de hacer una suposición sobre lo que el autor del código intentaba hacer. Sin embargo, esto puede llevar a errores y malinterpretaciones en el futuro, especialmente si otras personas trabajan en el mismo código.
+   
+Por lo tanto, en lugar de adivinar, se recomienda buscar una explicación clara y detallada sobre lo que el código está tratando de hacer. Si no está claro, es mejor preguntar al autor original del código o a otros miembros del equipo para obtener una aclaración antes de continuar.
 
-*Ejemplo*:
-
-```python
-# Mal
-def calcular_impuestos(ingresos, gastos): 
-    return (ingresos - gastos) * 0.15 if ingresos > 1000 
-else (ingresos - gastos) * 0.10
-
-# Bien
-def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): 
-    tasa = tasa_alta if ingresos > 1000       
-    else tasa_baja 
-    return (ingresos - gastos) * tasa
-```
 -----
- 13. **Debería de haber una – y preferiblemente sólo una – forma obvia de hacerlo**: 
- Debe buscarse la simplicidad y claridad en el código y evitar soluciones confusas o con múltiples formas de hacer lo mismo.
+ 12.  **Debería haber una, y preferiblemente solo una, forma obvia de hacerlo**: Debe buscarse la simplicidad y claridad en el código y evitar soluciones confusas o con múltiples formas de hacer lo mismo.
+
+-----
+ 13.  **Aunque esa forma puede no ser obvia al principio a menos que seas Holandés**: Se refiere a que a veces es necesario pensar fuera de la caja para encontrar la solución más simple y eficiente. La frase "a no ser que seas Holandés" se refiere al creador de Python, Guido van Rossum, que es holandés. Obviamente, recordar y comprender cualquier regla en Python sería más fácil para él que para cualquier otra persona.
+
+Un ejemplo que ilustra los principios 11, 12 y 13 podría ser un programa que genera una contraseña aleatoria. Si se utiliza una implementación ambigua o poco clara, puede ser difícil para el usuario entender cómo se generó la contraseña o cómo deben usarla. Por ejemplo, un código que genera una contraseña de forma ambigua podría ser el siguiente:
 
 *Ejemplo*: 
 
 ```python
 # Mal
+import random
+import string
 
-def calcular_impuestos(ingresos, gastos): 
-    if ingresos > 1000: 
-        tasa = 0.15 
-    else: tasa = 0.10 
-    return (ingresos - gastos) * tasa
+def generar_password():
+    letras = string.ascii_letters
+    simbolos = string.punctuation
+    numeros = string.digits
 
-# Bien
-def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10): 
-    tasa = tasa_alta 
-    if ingresos > 1000 else tasa_baja 
-        return (ingresos - gastos) * tasa
-```
------
- 14. **Aunque la forma no parezca obvia a la primera, a no ser que seas Holandés**:
-La frase "Aunque la forma no parezca obvia a la primera" se refiere a que a veces es necesario pensar fuera de la caja para encontrar la solución más simple y eficiente. La frase "a no ser que seas Holandés" es una broma y no debe ser tomada en serio.
+    password = random.sample(letras, 2) + random.sample(simbolos, 2) + random.sample(numeros, 4)
+    random.shuffle(password)
 
-*Ejemplo*: 
-
-```python
-# Mal
-def encontrar_elemento(lista, elemento):
-    for i in range(len(lista)):
-        if lista[i] == elemento:
-            return i
-    return -1
+    return ''.join(password)
 
 # Bien
-def encontrar_elemento(lista, elemento):
-    try:
-        return lista.index(elemento)
-    except ValueError:
-        return -1
+import random
+import string
+
+def generar_password():
+    caracteres = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choices(caracteres, k=8))
+
+    return password
 ```
+
+En el primer ejemplo, la función genera una contraseña aleatoria combinando dos letras, dos símbolos y cuatro números, y luego baraja los caracteres. Aunque esto genera una contraseña aleatoria, el código no es claro y puede ser difícil para el usuario entender cómo funciona.
+
+En el segundo ejemplo, la función utiliza un solo conjunto de caracteres para generar la contraseña en lugar de tres diferentes. También utiliza la función "choices" del módulo "random" para elegir aleatoriamente los caracteres en lugar de hacerlo con tres llamadas separadas a "random.sample". Además, la función genera una contraseña de ocho caracteres de longitud en lugar de seis, lo que la hace más segura.
 
 -----
 
-15. **Ahora es mejor que nunca**: 
-Es importante comenzar a implementar buenas prácticas de codificación desde el principio, aunque no se hayan implementado antes.
-
-*Ejemplo*: 
-
-```python 
-# Mal
-def calcular_promedio(calificaciones):
-    total = 0
-    for calificacion in calificaciones:
-        total += calificacion
-    promedio = total / len(calificaciones)
-    return promedio
-
-# Bien
-def calcular_promedio(calificaciones):
-    return sum(calificaciones) / len(calificaciones)
-```
-En el primer ejemplo, se utiliza un ciclo for para calcular el promedio de una lista de calificaciones. Esta solución es compleja y difícil de explicar.
-
-En el segundo ejemplo, se utiliza la función sum y una expresión matemática para calcular el promedio. Esta solución es más clara y fácil de explicar.
+14. **Ahora es mejor que nunca**: Es importante comenzar a implementar buenas prácticas de codificación desde el principio, aunque no se hayan implementado antes.
 
 -----
 
-16.  **Aunque nunca es a menudo mejor que ahora mismo**: 
-Es importante no posponer la implementación de buenas prácticas de codificación, pero también es importante tener en cuenta el contexto y asegurarse de que la implementación se haga en el momento adecuado.
-
-*Ejemplo*: 
-
-```python 
-# Mal
-def calcular_impuestos(ingresos, gastos):
-    tasa = 0.15
-    return (ingresos - gastos) * tasa
-
-# Bien
-def calcular_impuestos(ingresos, gastos, tasa=0.15):
-    return (ingresos - gastos) * tasa
-```
+15.  **Aunque nunca es a menudo mejor que ahora mismo**: Es importante no posponer la implementación de buenas prácticas de codificación, pero también es importante tener en cuenta el contexto y asegurarse de que la implementación se haga en el momento adecuado.
 
 -----
 
-17.  **Si la implementación es difícil de explicar, es una mala idea**: 
-Si una solución es difícil de explicar, probablemente sea complicada y difícil de entender y mantener. Es importante buscar soluciones claras y fáciles de explicar.
+16.  **Si la implementación es difícil de explicar, es una mala idea**: Si una solución es difícil de explicar, probablemente sea complicada y difícil de entender y mantener. Es importante buscar soluciones claras y fáciles de explicar.
 
-*Ejemplo*: 
-
-```python 
-# Mal
-def calcular_impuestos(ingresos, gastos, tasa=0.15, rebaja=0.05):
-    if ingresos < 1000:
-        tasa -= rebaja
-    return (ingresos - gastos) * tasa
-
-# Bien
-def calcular_impuestos_baja(ingresos, gastos, tasa=0.15, rebaja=0.05):
-    return (ingresos - gastos) * (tasa - rebaja)
-
-def calcular_impuestos_alta(ingresos, gastos, tasa=0.15):
-    return (ingresos - gastos) * tasa
-
-def calcular_impuestos(ingresos, gastos, tasa=0.15, rebaja=0.05):
-    if ingresos < 1000:
-    return calcular_impuestos_baja(ingresos, gastos, tasa, rebaja)
-    else:
-    return calcular_impuestos_alta(ingresos, gastos, tasa)
-```
 -----
 
-18.  **Si la implementación es fácil de explicar, es una buena idea**: 
-Si una solución es fácil de explicar, probablemente sea clara y fácil de entender y mantener.
+17.  **Si la implementación es fácil de explicar, puede ser una buena idea**: Esto significa que la claridad y la simplicidad son factores importantes en la escritura de código. Un código claro y fácil de explicar es más fácil de comprender para otros programadores, lo que facilita la colaboración y el mantenimiento del código a largo plazo. Además, un código claro es más fácil de depurar y solucionar problemas, lo que reduce el tiempo y los costos de desarrollo.
 
-Esto significa que la claridad y la simplicidad son factores importantes en la escritura de código. Si una solución es fácil de explicar, es probable que sea clara y fácil de entender y mantener.
-
-Un código claro y fácil de explicar es más fácil de comprender para otros programadores, lo que facilita la colaboración y el mantenimiento del código a largo plazo. Además, un código claro es más fácil de depurar y solucionar problemas, lo que reduce el tiempo y los costos de desarrollo.
-
-Por lo tanto, es importante buscar soluciones claras y fáciles de explicar en lugar de soluciones confusas o complicadas que sean difíciles de entender y mantener. Esto no significa que siempre debas elegir la solución más simple o directa, sino que debes buscar un equilibrio entre la eficiencia y la claridad del código.
-
-*Ejemplo*: 
-
-```python
-# Mal
-def calcular_impuestos(ingresos, gastos):
-    if ingresos > 1000:
-        tasa = 0.15
-    else:
-        tasa = 0.10
-    return (ingresos - gastos) * tasa
-
-# Bien
-def calcular_impuestos(ingresos, gastos, tasa_alta=0.15, tasa_baja=0.10):
-    tasa = tasa_alta if ingresos > 1000 else tasa_baja
-    return (ingresos - gastos) * tasa
-```
-
-En el primer ejemplo, se establece la tasa de impuestos en base a un valor de ingresos. Esta solución es confusa y difícil de explicar, ya que no está claro cómo se establece la tasa de impuestos.
-
-En el segundo ejemplo, se utiliza una tasa alta y una tasa baja como argumentos opcionales, lo que permite establecer la tasa de impuestos de manera clara y fácil de explicar. Además, esta solución es más flexible y permite cambiar las tasas de impuestos sin tener que modificar el código principal.
 
 ---
 
-19.  **Los espacios de nombres son una buena idea, ¡usemos más de ellos!**: 
-Los espacios de nombres son una buena manera de organizar y separar el código en diferentes módulos y componentes, lo que facilita la legibilidad y la mantenibilidad del código.
+18.   **Los espacios de nombres son una buena idea, ¡usemos más de ellos!**: Los espacios de nombres son una buena manera de organizar y separar el código en diferentes módulos y componentes, lo que facilita la legibilidad y la mantenibilidad del código. La modularización es un mecanismo que permite organizar y distinguir entre diferentes conjuntos de nombres (variables, funciones, clases, módulos, etc.) en un programa de Python.
 
 *Ejemplo*:
 
